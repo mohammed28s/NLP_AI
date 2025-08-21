@@ -177,7 +177,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Created by Mohammed (https://github.com/mohammed28s) - feel free to reach out!
 
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Your__Profile-blue?style=flat-square&logo=linkedin)](https://linkedin.com/in/your-profile)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Your__Profile-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/mohammed-salim-86390a255)
 
 ---
 
