@@ -1,188 +1,151 @@
-# 🧠 Natural Language Processing (NLP) with Python
+🧠 Natural Language Processing (NLP) with Python
+https://img.shields.io/badge/Python-3.8%252B-blue?style=for-the-badge&logo=python
+https://img.shields.io/badge/Jupyter-Notebook-orange?style=for-the-badge&logo=jupyter
+https://img.shields.io/badge/NLP-Preprocessing-green?style=for-the-badge&logo=ai
+https://img.shields.io/badge/License-MIT-lightgrey?style=for-the-badge
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python)
-![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange?style=for-the-badge&logo=jupyter)
-![NLP](https://img.shields.io/badge/NLP-Preprocessing-green?style=for-the-badge&logo=ai)
-![License](https://img.shields.io/badge/License-MIT-lightgrey?style=for-the-badge)
+A comprehensive hands-on guide to core and advanced NLP techniques using Python. This repository contains practical implementations from basic text preprocessing to advanced information extraction, using real-world news data.
 
-A comprehensive hands-on guide to **core NLP preprocessing techniques** using Python. This repository contains practical implementations of essential text preprocessing methods to prepare raw text data for advanced Natural Language Processing tasks.
+📋 Table of Contents
+✨ New Features
 
----
+📚 All Topics Covered
 
-## 📋 Table of Contents
+🗃️ Dataset
 
-- [✨ Features](#-features)
-- [🚀 Quick Start](#-quick-start)
-- [📚 Topics Covered](#-topics-covered)
-- [🛠️ Installation](#️-installation)
-- [💻 Usage](#-usage)
-- [🏗️ Project Structure](#️-project-structure)
-- [📊 Results](#-results)
-- [🤝 Contributing](#-contributing)
-- [📜 License](#-license)
-- [📞 Contact](#-contact)
+🛠️ Installation
 
----
+💻 Usage
 
-## ✨ Features
+🏗️ Project Structure
 
-- 🎯 **Hands-on implementations** of all core NLP preprocessing techniques
-- 📓 **Jupyter Notebook** with detailed explanations and examples
-- 🔬 **Practical examples** using real-world text data
-- 📈 **Visualizations** to understand text transformations
-- ⚡ **Optimized code** for efficiency and readability
+📊 Results
 
----
+🤝 Contributing
 
-## 🚀 Quick Start
+📜 License
 
-### Prerequisites
-- Python 3.8+
-- pip package manager
-- virtualenv (recommended)
+📞 Contact
 
-### Installation
-```bash
-# Clone the repository
-git clone https://github.com/your-username/nlp-preprocessing-python.git
+✨ New Features
+This update introduces advanced NLP analysis on a real-world dataset:
 
-# Navigate to project directory
-cd nlp-preprocessing-python
+🧠 Named Entity Recognition (NER): Automatically identify and classify key information (people, organizations, locations) in news articles.
 
-# Create virtual environment
+📖 Parts-of-Speech (POS) Tagging: Analyze the grammatical structure of sentences to understand language patterns.
+
+📰 Real-World Data: All techniques are demonstrated on the bbc_news.csv dataset, containing real news articles from the BBC.
+
+📚 All Topics Covered
+1. Text Preprocessing
+Technique	Description	Example
+🔠 Lowercasing	Convert text to lowercase for normalization	"Hello World" → "hello world"
+🚫 Stop Words Removal	Eliminate common words that add little meaning	"the quick brown fox" → "quick brown fox"
+🔍 Regular Expressions	Clean text and extract patterns using Regex	"Price: $25.99" → "25.99"
+✂️ Tokenization	Split text into words or sentences	"Hello world!" → ["Hello", "world", "!"]
+🌱 Stemming	Reduce words to their root form (algorithmic)	"running" → "run"
+🍃 Lemmatization	Reduce words to their dictionary base form (linguistic)	"better" → "good"
+🔗 N-Grams	Generate word sequences for context analysis	"natural language processing" → ["natural language", "language processing"]
+2. Advanced NLP Analysis
+Technique	Description	Example
+🧠 Named Entity Recognition (NER)	Identify and classify named entities	"Apple is located in Cupertino." → [('Apple', 'ORG'), ('Cupertino', 'LOC')]
+📖 Parts-of-Speech (POS) Tagging	Label words with their grammatical parts	"She runs quickly" → [('She', 'PRP'), ('runs', 'VBZ'), ('quickly', 'RB')]
+🗃️ Dataset
+The project uses the bbc_news.csv dataset. This dataset contains:
+
+Contents: News articles from the BBC across different categories (e.g., business, politics, tech).
+
+Use Case: Perfect for demonstrating NLP techniques on real, unstructured text data.
+
+Columns: Likely includes article_id, category, text, etc.
+
+🛠️ Installation
+Clone the repository:
+
+bash
+git clone https://github.com/mohammed28s/NLP_AI.git
+cd NLP_AI
+Create and activate a virtual environment (recommended):
+
+bash
 python -m venv nlp-env
-
-# Activate virtual environment
 # On Windows:
 nlp-env\Scripts\activate
 # On macOS/Linux:
 source nlp-env/bin/activate
+Install dependencies:
 
-# Install dependencies
+bash
 pip install -r requirements.txt
+Download necessary NLP models:
 
-# Launch Jupyter Notebook
+bash
+python -m spacy download en_core_web_sm
+python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords'); nltk.download('averaged_perceptron_tagger'); nltk.download('maxent_ne_chunker'); nltk.download('words')"
+💻 Usage
+Launch Jupyter Notebook:
+
+bash
 jupyter notebook
-```
+Open and run the notebooks:
 
----
+NLP_Preprocessing.ipynb: For fundamental text cleaning and preparation.
 
-## 📚 Topics Covered
+Advanced_NLP_Analysis.ipynb: For NER, POS tagging, and analysis on the BBC news dataset.
 
-### 1. 🔠 Lowercasing
-- Convert all text to lowercase for normalization
-- Reduce vocabulary size and improve consistency
-
-### 2. 🚫 Removing Stop Words
-- Eliminate common words (e.g., "the", "is", "and")
-- Focus on meaningful content words
-
-### 3. 🔍 Regular Expressions (Regex)
-- Pattern matching for text cleaning
-- Extract specific text patterns
-- Remove unwanted characters and formatting
-
-### 4. ✂️ Tokenization
-- Split text into words, sentences, or subwords
-- Word tokenization and sentence segmentation
-
-### 5. 🌱 Stemming
-- Reduce words to their root form (e.g., "running" → "run")
-- Algorithmic approach using Porter, Snowball stemmers
-
-### 6. 🍃 Lemmatization
-- Linguistically informed word root reduction
-- More accurate than stemming (e.g., "better" → "good")
-
-### 7. 🔗 N-Grams
-- Generate word sequences (bigrams, trigrams)
-- Capture context and phrase information
-
----
-
-## 🛠️ Installation
-
-Detailed installation instructions:
-
-```bash
-# Install required packages
-pip install nltk scikit-learn pandas numpy matplotlib seaborn
-
-# Download NLTK data
-python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords'); nltk.download('wordnet')"
-```
-
----
-
-## 💻 Usage
-
-Open the Jupyter Notebook and execute cells sequentially:
-
-```python
-# Example code snippet for text preprocessing
-from nlp_preprocessing import TextPreprocessor
-
-processor = TextPreprocessor()
-processed_text = processor.clean_text("Your raw text goes here!")
-print(processed_text)
-```
-
----
-
-## 🏗️ Project Structure
-
-```
-nlp-preprocessing-python/
+🏗️ Project Structure
+text
+NLP_AI/
 │
-├── 📓 nlp_preprocessing.ipynb      # Main Jupyter Notebook
-├── 🔧 nlp_preprocessing.py         # Python module with functions
-├── 📊 sample_data/                 # Example text datasets
-├── 📈 results/                     # Output and visualizations
-├── 📝 requirements.txt             # Project dependencies
-└── 📖 README.md                    # Project documentation
-```
+├── 📓 NLP_Preprocessing.ipynb          # Core preprocessing techniques
+├── 📓 Advanced_NLP_Analysis.ipynb      # NEW: NER, POS on BBC news data
+├── 📰 bbc_news.csv                     # NEW: Primary dataset
+├── 🔧 src/                             # Utility modules (optional)
+│   ├── preprocess.py
+│   └── analyze.py
+├── 📊 results/                         # Outputs, charts, and visuals
+├── 📝 requirements.txt                 # Project dependencies
+└── 📖 README.md                        # Project documentation
+📊 Results
+The notebooks will demonstrate:
 
----
+Preprocessing Impact: Cleaned and normalized text ready for analysis.
 
-## 📊 Results
+Entity Analysis: Visualizations of the most common people, organizations, and locations in the news.
 
-The notebook includes visualizations showing:
-- 📉 Vocabulary reduction after preprocessing
-- 📊 Word frequency distributions
-- 🗂️ Comparison of different techniques
-- 📋 Performance metrics for each method
+Grammatical Insights: Trends in language use across different news categories.
 
----
+Sample Output:
 
-## 🤝 Contributing
+python
+# NER Example Output
+Text: "Apple announced its new iPhone in California."
+NER: [('Apple', 'ORG'), ('iPhone', 'PRODUCT'), ('California', 'GPE')]
 
-We welcome contributions! Please feel free to submit issues, feature requests, or pull requests.
+# POS Example Output
+Text: "She quickly coded the solution."
+POS: [('She', 'PRP'), ('quickly', 'RB'), ('coded', 'VBD'), ('the', 'DT'), ('solution', 'NN')]
+🤝 Contributing
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
 
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Fork the Project
 
----
+Create your Feature Branch (git checkout -b feature/AmazingFeature)
 
-## 📜 License
+Commit your Changes (git commit -m 'Add some AmazingFeature')
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Push to the Branch (git push origin feature/AmazingFeature)
 
----
+Open a Pull Request
 
-## 📞 Contact
+📜 License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-Created by Mohammed (https://github.com/mohammed28s) - feel free to reach out!
+📞 Contact
+Mohammed - https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin - your.email@example.com
 
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Mohammed--Salim-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/mohammed-salim-86390a255)
-
----
+Project Link: https://github.com/mohammed28s/NLP_AI
 
 <div align="center">
-
-### ⭐️ Don't forget to star this repository if you found it helpful!
-
+⭐️ Give this repo a star if you found it helpful!
 </div>
