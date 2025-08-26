@@ -38,7 +38,7 @@ This repository contains hands-on implementations of core **NLP preprocessing te
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Python 3.8+
+- Python 3.13+
 - pip package manager
 - virtualenv (recommended)
 
